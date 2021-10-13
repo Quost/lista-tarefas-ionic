@@ -1,0 +1,59 @@
+<ion-header>
+
+  <ion-toolbar color="primary">
+
+    <ion-buttons slot="start">
+
+      <ion-back-button></ion-back-button>
+
+    </ion-buttons>
+
+    <ion-title color="secondary">Editar Tarefa</ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<!-- Formulário para adição ou edição de tarefa -->
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-item>
+
+      <ion-label position="floating">Nome</ion-label>
+
+      <ion-input type="text" name="nome" [(ngModel)]="model.nome"></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-label position="floating">Local</ion-label>
+
+      <ion-input type="tel" name="local" [(ngModel)]="model.local"></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-label position="floating">Data</ion-label>
+
+      <ion-datetime displayFormat="DD/MM/YYYY" name="data" [(ngModel)]="model.data"></ion-datetime>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-label>Concluida</ion-label>
+
+      <ion-checkbox name="status" [(ngModel)]="model.status"></ion-checkbox>
+
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button expand="block" (click)="save()">Salvar</ion-button>
+
+</ion-content>

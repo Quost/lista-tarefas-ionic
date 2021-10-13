@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'edita-tarefa',
+    loadChildren: () => import('./edita-tarefa/edita-tarefa.module').then( m => m.EditaTarefaPageModule)
+  },
 ];
 
 @NgModule({
